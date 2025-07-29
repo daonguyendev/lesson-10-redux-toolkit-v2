@@ -1,0 +1,1 @@
+export const EXAMPLE_CONSTANT = "https://6884c141745306380a39457a.mockapi.io/api/v1";
