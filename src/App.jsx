@@ -1,21 +1,18 @@
-import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 import "./App.css";
-import BookList from "./components/book/BookList";
-import BookDetail from "./components/book/BookDetail";
-import BookAdding from "./components/book/BookAdding";
-import BookEditing from "./components/book/BookEditing";
+import Menu from "./components/common/Menu";
+import AppRoutes from "./routes/AppRoutes";
+import "./assets/css/form.css";
+import "./assets/css/table.css";
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<BookList />} />
-        <Route path={`/book/:bookId`} element={<BookDetail />} />
-        <Route path={"/book/add"} element={<BookAdding />} />
-        <Route path={`/book/edit/:bookId`} element={<BookEditing />} />
-      </Routes>
-    </BrowserRouter>
+    <>
+      <BrowserRouter>
+        <Menu />
+        <AppRoutes />
+      </BrowserRouter>
+    </>
   );
 }
 

@@ -159,12 +159,4 @@ export const selectBookAdded = (state) => state.book.value;
 export const selectBookEdited = (state) => state.book.value;
 export const selectBookRemoved = (state) => state.book.value;
 
-//Enhancement feature of book slice
-export const setLoadingTrueIfCalled = (isCalled) => (dispatch, getState) => {
-  const currentValue = selectLoading(getState());
-  if (currentValue === isCalled) {
-    dispatch(setLoading(true));
-  }
-};
-
 export default bookSlice.reducer;
